@@ -1,15 +1,18 @@
-from scrapForEmoji import emojiScaper
+import sys
+sys.path.insert(0,'..')
+
+from scrapEmoji import emojiScaper
 
 import json
 
-with open('categoryDetails.json') as json_file:
+with open('../categoryDetails.json') as json_file:
     data = json.load(json_file)
 
-obj1 = {
-    "emoji": "\ud83d\ude00",
-    "name": "Grinning Face",
-    "url": "/grinning-face/"
-}
+obj1 =                 {
+                    "emoji": "\ud83e\uddd1\u200d\ud83e\udd1d\u200d\ud83e\uddd1",
+                    "name": "People Holding Hands",
+                    "url": "/people-holding-hands/"
+                }
 
 
 # for debug purpose
@@ -19,5 +22,5 @@ obj1 = {
 #     "url": "/flag-for-texas-ustx/"
 # }
 out = emojiScaper(data['home'], obj1['url'])
-print(json.dumps(out, sort_keys=True, indent=4))
+# print(json.dumps(out, sort_keys=True, indent=4))
 ## debug purpose ends

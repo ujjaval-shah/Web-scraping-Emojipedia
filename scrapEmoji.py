@@ -15,12 +15,12 @@ def emojiScaper(homeUrl, urlSlug):
     # title: [emoji and title]
     articleNode = soup.article
     H_1 = articleNode.h1
-    print(H_1)
+    # print(H_1)
     scrap['emoji'] = H_1.span.text
-    print(H_1.span.text)
+    # print(H_1.span.text, end=" ")
     H_1.span.decompose()
     scrap['title'] = H_1.text.strip()
-    print(H_1.text.strip())
+    print(H_1.text.strip(), end="|")
 
     # description in HTML format
     sectionNode = articleNode.find('section',{'class':['description']})
@@ -117,6 +117,32 @@ def emojiScaper(homeUrl, urlSlug):
         scrap['shortcodes'] = shortcodesList
     else:
         scrap['shortcodes'] = []
+
+    ### SeeAlso...
+
+    seeAlsoNode = H_2list[2]
+    # print(seeAlsoNode.text)
+    liList = seeAlsoNode.find_next_sibling().findAll('li')
+
+    emojiList = []
+
+    # print(liList)
+
+    for node in liList:
+        try:
+            emoji = {}
+            emoji['emoji'] = node.span.text
+            node.span.decompose()
+            emoji['name'] = node.text.strip()
+            emoji['url'] = node.a['href']
+            emojiList.append(emoji)
+        except:
+            print("Error in ...")
+            print(node)
+
+    scrap['see-also'] = emojiList
+
+    ### Adding id/url-slug
 
     scrap['id'] = urlSlug[1:-1]
 
