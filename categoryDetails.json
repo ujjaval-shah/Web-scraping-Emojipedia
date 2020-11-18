@@ -1,0 +1,45 @@
+{
+    "categories": [
+        {
+            "category": "Smileys & People",
+            "emoji": "\ud83d\ude03",
+            "url": "/people/"
+        },
+        {
+            "category": "Animals & Nature",
+            "emoji": "\ud83d\udc3b",
+            "url": "/nature/"
+        },
+        {
+            "category": "Food & Drink",
+            "emoji": "\ud83c\udf54",
+            "url": "/food-drink/"
+        },
+        {
+            "category": "Activity",
+            "emoji": "\u26bd",
+            "url": "/activity/"
+        },
+        {
+            "category": "Travel & Places",
+            "emoji": "\ud83c\udf07",
+            "url": "/travel-places/"
+        },
+        {
+            "category": "Objects",
+            "emoji": "\ud83d\udca1",
+            "url": "/objects/"
+        },
+        {
+            "category": "Symbols",
+            "emoji": "\ud83d\udd23",
+            "url": "/symbols/"
+        },
+        {
+            "category": "Flags",
+            "emoji": "\ud83c\udf8c",
+            "url": "/flags/"
+        }
+    ],
+    "home": "https://emojipedia.org/"
+}
