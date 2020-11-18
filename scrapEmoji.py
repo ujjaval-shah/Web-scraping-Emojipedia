@@ -140,7 +140,7 @@ def emojiScaper(homeUrl, urlSlug):
             print("Error in ...")
             print(node)
 
-    scrap['see-also'] = emojiList
+    scrap['seeAlso'] = emojiList
 
     ### Adding id/url-slug
 
